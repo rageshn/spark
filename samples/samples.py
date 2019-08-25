@@ -33,3 +33,6 @@ for val in file_content:
     session.execute("insert into movies_list " + cols + " values " + values_to_insert, tuple(col_values))
 
 print("Rows inserted: ", i)
+
+session.shutdown()
+cluster.shutdown()
